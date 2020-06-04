@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "Hello World, My Name is Prish, Time is `date`" >> /tmp/infra_check_log_file.log
-echo "The Mount available are : \n `cat /etc/fstab`" >> /tmp/infra_check_log_file.log
-echo "The Mount available are : \n `df -h`" >> /tmp/infra_check_log_file.log
-echo "The users available are : \n `cat /etc/passwd`" >> /tmp/infra_check_log_file.log
-echo "Root login available : `cat /etc/ssh/sshd_config | grep -v 'PermitRootLogin'`"  >> /tmp/infra_check_log_file.log
+echo "The Mount available are :  `cat /etc/fstab`" >> /tmp/infra_check_log_file.log
+echo "The Mount available are :  `df -h`" >> /tmp/infra_check_log_file.log
+echo "The users available are :  `cat /etc/passwd`" >> /tmp/infra_check_log_file.log
+echo "The Resolve File records available are :  `cat /etc/resolv.conf`" >> /tmp/infra_check_log_file.log
