@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+  - name: Copy infracheck.sh file from Ansible Master server to the target server
+    copy: src=/home/deploy_user/artifacts/infracheck.sh dest=/home/deploy_user/artifacts/
+
+  - name: When the infracheck.sh file is copied to the target server then assign required permission to the file so that it is executable
+    file: path=/home/deploy_user/artifacts/infracheck.sh mode='0755'
+
+  - name: Execute the infracheck.sh file on the target server
+    shell: /home/deploy_user/artifacts/infracheck.sh >> /home/deploy_user/artifacts/somelog.txt
