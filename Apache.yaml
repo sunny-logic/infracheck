@@ -1,6 +1,9 @@
 ---
-- hosts: all
+- hosts: frontend
+  become: true
+  
   tasks:
+  
   - name: Install Apache
     yum: name=apache2 state=present
 
