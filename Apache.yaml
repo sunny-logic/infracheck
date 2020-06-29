@@ -9,3 +9,6 @@
 
   - name: Start Apache Service
     service: name=httpd state=restarted
+
+  - name: Copy source code file to application directory
+    copy: src=/home/deploy_user/artifacts/index.html dest=/var/www/html/index.html
