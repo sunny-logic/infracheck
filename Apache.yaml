@@ -1,5 +1,6 @@
 ---
-- become: true
+- hosts: hosts: "{{ Variable_Host }}"
+  become: true
   
   tasks:
   
