@@ -1,6 +1,5 @@
 ---
-- hosts: frontend
-  become: true
+- become: true
   
   tasks:
   
