@@ -1,5 +1,5 @@
 ---
-- hosts: "{{ Variable_Host }}"
+- hosts: frontend
   become: true
   
   tasks:
