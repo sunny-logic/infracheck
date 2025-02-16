@@ -1,0 +1,11 @@
+---
+  - name: Shell Examples
+    hosts: web_servers
+    become: true
+    tasks:
+    - name: Print hostname -I info
+      shell:
+         "hostname -I"
+      register: hostnameIP
+      tags: hostnameIP
+    - debug: msg="{{hostnameIP.stdout}}"
